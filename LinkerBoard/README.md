@@ -9,8 +9,8 @@ Before we try to make the library, we need to make sure that we have all of the 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install automake
 sudo apt-get install autoconf
+sudo apt-get install automake
 sudo apt-get install libtool
 sudo apt-get install libtool-bin
 sudo apt-get install python-dev
@@ -20,18 +20,35 @@ git clone https://github.com/mvartani76/iot-detroit-jan2017
 
 cd iot-detroit-jan2017
 
+Grab the libsoc code from Github...
+```
 git clone https://github.com/jackmitch/libsoc
-
+```
 cd libsoc
 
 autoreconf -i
 
 ./configure --enable-board=dragonboard410c --enable-python=2
 
+Connect the libs to the source and create the required links and sets it up for the final phase it also parses the human readable to machine readable using the "make" command
+
+```
 make
+```
+
+Create the binary files and move all required files / executables and associated libs to their appropriate directories. This is done as root.
+
+```
 sudo make install
+```
 
-sudo ldconfig -v -N
+Map the shared library name (libsoc) to the location of the corresponding shared library file (/usr/local/lib).
+```
+sudo ldconfig
+```
 
+This code utilizes the libsoc_zero library to remove some of the code and simplify things a bit. Type the following commands to install the library using the Python Package Manager, PIP
+```
 sudo apt-get install python-pip
 pip install libsoc_zero
+```
