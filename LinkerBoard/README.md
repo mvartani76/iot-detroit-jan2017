@@ -34,9 +34,16 @@ git clone https://github.com/jackmitch/libsoc
 ```
 cd libsoc
 
-autoreconf -i
+Configure/install the libsoc build scripts using autoreconf
 
+```
+autoreconf -i
+```
+
+Configure the library to use the dragonboard410c board python 2.7 bindings
+```
 ./configure --enable-board=dragonboard410c --enable-python=2
+```
 
 Connect the libs to the source and create the required links and sets it up for the final phase it also parses the human readable to machine readable using the "make" command
 
