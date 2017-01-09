@@ -41,3 +41,16 @@ Please make sure that the phone number has both SMS and MMS capabilities in orde
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/twilio-phone-number-capabilities.jpg "Twilio Phone Number Capabilities")
 
+The following two code snippets show where the Twilio Phone Number is used...
+
+**send_twilio_sms.py**
+```python
+# Send the SMS message
+message = client.messages.create(to="verified_phone_number", from_="twilio_phone_number", body="A message from your Dragonboard 410c!")
+send_twilio_mms.py
+```
+**send_twilio_mms.py**
+```python
+# Send the MMS message
+message = client.messages.create(to="verified_phone_number", from_="twilio_phone_number", body="The Dragonboard is Here!", media_url=media)
+```
