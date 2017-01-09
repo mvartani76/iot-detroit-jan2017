@@ -4,6 +4,7 @@ The following directory contains code snippets that demonstrate some of the func
 
 ##Linker Mezzanine Card
 The Linker Mezzanine Card is a shield for 96boards compatible devices such as the Dragonboard 410c.
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker_mezzanine_card_photo1.jpg "Linker Mezzanine Card")
 
 #Installing libsoc library
 
