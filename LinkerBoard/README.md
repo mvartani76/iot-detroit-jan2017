@@ -1,3 +1,10 @@
+#LinkerBoard Code
+
+The following directory contains code snippets that demonstrate some of the functionality of the linker mezzanine card.
+
+##Linker Mezzanine Card
+The Linker Mezzanine Card is a shield for 96boards compatible devices such as the Dragonboard 410c.
+
 #Installing libsoc library
 
 Some of the code that utilizes GPIOs/ADCs/SPI/I2C/etc. requires the use of the libsoc library.
