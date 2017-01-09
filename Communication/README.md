@@ -32,3 +32,12 @@ auth_token = "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 
 client = TwilioRestClient(account_sid, auth_token)
 ```
+### Twilio Phone Number Activation
+To send the messages, you will need to create/choose a Twilio phone number.
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/twilio-phone-number.jpg "Twilio Phone Number Activation")
+
+Please make sure that the phone number has both SMS and MMS capabilities in order to successfully run the example code.
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/twilio-phone-number-capabilities.jpg "Twilio Phone Number Capabilities")
+
