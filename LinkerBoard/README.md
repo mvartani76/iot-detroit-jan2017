@@ -4,6 +4,7 @@ The following directory contains code snippets that demonstrate some of the func
 
 ##Linker Mezzanine Card
 The Linker Mezzanine Card is a shield for 96boards compatible devices such as the Dragonboard 410c.
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker_mezzanine_card_photo1.jpg "Linker Mezzanine Card")
 
 #Installing libsoc library
 
@@ -33,9 +34,16 @@ git clone https://github.com/jackmitch/libsoc
 ```
 cd libsoc
 
-autoreconf -i
+Configure/install the libsoc build scripts using autoreconf
 
+```
+autoreconf -i
+```
+
+Configure the library to use the dragonboard410c board python 2.7 bindings
+```
 ./configure --enable-board=dragonboard410c --enable-python=2
+```
 
 Connect the libs to the source and create the required links and sets it up for the final phase it also parses the human readable to machine readable using the "make" command
 
