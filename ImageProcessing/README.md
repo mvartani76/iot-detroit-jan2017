@@ -1,6 +1,6 @@
 #Image Processing using OpenCV
 
-The following examples illustrate some image processing techniquest using Python OpenCV.
+The following examples illustrate some image processing techniques using Python OpenCV.
 
 The default linaro debian image that we are using for these examples did not come with Python OpenCV so we need to install it as shown below.
 
