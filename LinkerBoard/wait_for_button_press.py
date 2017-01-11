@@ -14,4 +14,9 @@ btnA = Button("GPIO-A")
 btnA.when_pressed(btn_cb)
 
 print("Waiting for button press event...")
-pause()
+try:
+	pause()
+except KeyboardInterrupt:
+	print("Program Closed")
+	btnA.close()
+	pass
