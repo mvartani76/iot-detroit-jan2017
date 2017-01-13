@@ -10,7 +10,7 @@ REGION_HOST = "your-region-host"
 
 
 def upload_file_to_s3(file_file_path, bucket_name):
-	"""Uploads images to Amazon's S3 service.
+	"""Uploads files to Amazon's S3 service.
  
 	Arguments:
 	file_file_path: Path to file to upload on local machine.
