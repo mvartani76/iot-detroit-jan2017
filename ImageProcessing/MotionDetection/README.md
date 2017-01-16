@@ -1,5 +1,12 @@
-# Motion Detection
+#Motion Detection
 Repository for Motion Detector Code
+
+Need to install `imutils` in order to use some of the convenience functions in the code below.
+
+```
+pip install imutils
+```
+The source github for this code is located here: https://github.com/jrosebr1/imutils
 
 ##motion_detector_static_ref.py
 The source for this code is a tutorial from Adrian Rosebrock @ pyimagesearch about installing a simple motion detection algorithm using OpenCV on a Raspberry Pi. The tutorial is located at the URL, http://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/.
