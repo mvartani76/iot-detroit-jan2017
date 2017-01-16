@@ -6,7 +6,7 @@ The following directory contains code snippets that demonstrate some of the func
 The Linker Mezzanine Card is a shield for 96boards compatible devices such as the Dragonboard 410c.
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker_mezzanine_card_photo1.jpg "Linker Mezzanine Card")
 
-#Installing libsoc library
+##Installing libsoc library
 
 Some of the code that utilizes GPIOs/ADCs/SPI/I2C/etc. requires the use of the libsoc library.
 
@@ -66,4 +66,13 @@ This code utilizes the libsoc_zero library to remove some of the code and simpli
 ```
 sudo apt-get install python-pip
 pip install libsoc_zero
+```
+##Enabling SPI
+In order to use the included sliding potentiometer, we need to enable SPI functionality. Unfortunately this is a complicated process that involves rebuilding the linux kernel as shown in the following URL, https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/Configuration/EnableSPI.md.
+
+As a simple work around, an SD card image with SPI enabled is included in the SDCard_Images directory. Please note that this is just a temporary work around and may go out of date quickly so always check http://builds.96boards.org/releases/dragonboard410c/ for the latest build images.
+
+Okay so now that we have that out of the way, we enable SPI functionality by executing the following code
+```
+pip install spidev
 ```
