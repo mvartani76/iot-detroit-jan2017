@@ -6,6 +6,9 @@ The following directory contains code snippets that demonstrate some of the func
 The Linker Mezzanine Card is a shield for 96boards compatible devices such as the Dragonboard 410c.
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker_mezzanine_card_photo1.jpg "Linker Mezzanine Card")
 
+###Testing Touch Sensor and Sliding Potentiometer
+The included code in this directory will test the functionality of the Touch Sensor and Sliding Potentiometer.
+
 ##Installing libsoc library
 
 Some of the code that utilizes GPIOs/ADCs/SPI/I2C/etc. requires the use of the libsoc library.
