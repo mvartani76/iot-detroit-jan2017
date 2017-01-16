@@ -11,12 +11,14 @@ The included code in this directory will test the functionality of the Touch Sen
 
 ####Touch Sensor
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker-touch-sensor.jpg "Linker Touch Sensor")
+
 `button_press_monitor.py` and `wait_for_button_press.py` utilize/test the touch sensor module with the former code using a polling loop and the latter using interrupts/callback functions.
 
 The code requires that the touch sensor module is plugged into the header labeled **D1**.
 
 ####Sliding Potentiometer
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linker-sliding-potentiometer.jpg "Linker Sliding Potentiometer")
+
 `spi_monitor.py` uses a polling loop to read data from the sliding potentiometer via the ADC.
 
 The code requires that the sliding potentiometer module is plugged into the header labeled **ADC1**.
