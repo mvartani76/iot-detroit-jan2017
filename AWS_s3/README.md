@@ -12,3 +12,7 @@ After logging into the AWS Management Console, we need to navigate to the S3 Adm
 In the S3 Admin Panel, click the "Create Bucket" button in the upper left hand corner as shown below.
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-management-console.jpg "S3 Management Console")
+
+Next we need to give the S3 bucket a **UNIQUE** name.
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/create-bucket-2.jpg "Create S3 Bucket")
