@@ -25,6 +25,12 @@ And then clicking on Permissions
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-permissions.jpg "S3 Bucket Permissions")
 
-And finally "Edit Bucket Policy"
+And finally "Add Bucket Policy"
 
-![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-properties-policy.jpg "Edit Bucket Policy")
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-properties-policy.jpg "Add Bucket Policy")
+
+Bucket policies are written in JSON and you can use this template as a guide:
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-policy.jpg "Bucket Policy Template")
+
+Save the policy and the bucket should be configured to allow public access to retrieve files.
