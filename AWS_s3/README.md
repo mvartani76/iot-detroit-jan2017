@@ -23,6 +23,8 @@ After we create our S3 bucket, we need to update the policy to give permissions 
 
 And then clicking on Permissions
 
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-permissions.jpg "S3 Bucket Permissions")
+
 And finally "Edit Bucket Policy"
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-properties-policy.jpg "Edit Bucket Policy")
