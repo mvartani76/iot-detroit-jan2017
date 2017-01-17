@@ -16,3 +16,13 @@ In the S3 Admin Panel, click the "Create Bucket" button in the upper left hand c
 Next we need to give the S3 bucket a **UNIQUE** name.
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/create-bucket-2.jpg "Create S3 Bucket")
+
+After we create our S3 bucket, we need to update the policy to give permissions to access the bucket. This is done by first clicking on "Properties".
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-properties.jpg "S3 Bucket Properties")
+
+And then clicking on Permissions
+
+And finally "Edit Bucket Policy"
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-properties-policy.jpg "Edit Bucket Policy")
