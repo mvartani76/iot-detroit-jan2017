@@ -34,3 +34,8 @@ Bucket policies are written in JSON and you can use this template as a guide:
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/s3-bucket-policy.jpg "Bucket Policy Template")
 
 Save the policy and the bucket should be configured to allow public access to retrieve files.
+
+##Security Credentials
+To access the S3 bucket from the python application, we need an aws access key and secret which can be created in the Security Credentials page of the AWS Management Console.
+
+Click Show Access Key and we can keep our values for our AWS credentials or download the root key csv file.
