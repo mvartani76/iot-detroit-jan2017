@@ -9,8 +9,8 @@ During the meetup we will attempt to cover the basic features of the Dragonboard
 - Linker Mezzanine Card (LS Expansion Header)
 - Python
 - OpenCV
-  -Facial Detection
-  -Motion Detection
+  - Facial Detection
+  - Motion Detection
 - Amazon S3
 - Messaging using Twilio
 
