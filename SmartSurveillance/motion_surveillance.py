@@ -56,16 +56,21 @@ def send_alert_to_phone_number(from_=None, to=None, body=None, media_url=None):
 
 	twilio_client.messages.create(from_=from_, to=to, body=body, media_url=media_url)
 
-# Function that is called when motion is detected that uploads file to s3 bucket
-# and then sends MMS notifying user of detected motion with an image
-def send(image_file_path, s3_bucket):
-	s3_key = upload_image_to_s3(image_file_path, s3_bucket)
-	
-	media_url = "https://{0}/{1}/{2}".format(REGION_HOST, s3_bucket, s3_key.key)
-	print(media_url)
-	send_alert_to_phone_number(twilio_phone_number,verified_phone_number,msg_body,media_url)
-	
+# Function that is called when motion is detected that uploads file(s) to s3 bucket
+# and then sends MMS notifying user of detected motion with an image or images
+def send(image_file_paths, s3_bucket):
+	media_urls = []
 
+	# loop through the images and create array or media_urls to send to twilio
+	for image_file_path in image_file_paths:
+		s3_key = upload_image_to_s3(image_file_path, s3_bucket)
+	
+		media_url = "https://{0}/{1}/{2}".format(REGION_HOST, s3_bucket, s3_key.key)
+		print(media_url)
+		media_urls.append(media_url)
+
+	send_alert_to_phone_number(twilio_phone_number, verified_phone_number, msg_body, media_urls)
+	
 # Button Callback function to create new reference frame, firstFrame
 def btn_cb():
 	# In order to reference the global variable, need to declare callback variable as global
@@ -120,6 +125,11 @@ firstFrame = None
 
 # Initialize previous state to "Unoccupied"
 prev_state = 0
+
+# Initialize motion timer parameters
+MOTION_TIMER_DELAY = 5
+motion_timer_start = False
+motion_timer = 0
 
 # loop over the frames of the video
 while True:
@@ -183,10 +193,23 @@ while True:
 	# Capture Image if Status changes from Unoccupied to Occupied
 	if (state - prev_state) > 0:
 		print("Motion Detected")
+		img_files = []
 		img_file = "img-%s.jpg"%datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 		print(img_file)
+		img_files.append(img_file)
 		cv2.imwrite(img_file, frame)
-		send(img_file, s3_bucket)
+		motion_timer_start = True
+
+	# Set timer to capture second image after MOTION_TIMER_DELAY frames
+	if motion_timer_start:
+		if motion_timer == MOTION_TIMER_DELAY:
+			img_file = "img-%s.jpg"%datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+			img_files.append(img_file)
+			cv2.imwrite(img_file, frame)
+			send(img_files, s3_bucket)
+			motion_timer = 0
+			motion_timer_start = False
+		motion_timer = motion_timer + 1
 
 	# Store current state into previous state
 	prev_state = state
