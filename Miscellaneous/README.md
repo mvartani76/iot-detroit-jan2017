@@ -1,5 +1,14 @@
 #Miscellaneous Dragonboard Tips/Tricks
-##Configure WiFi
+##Connect to WiFi
+The Dragonboard410c has onboard single band 802.11n (WiFi) available.
+###Check WiFi Status
+You can check the status of the wifi connection via the command line by typing
+```
+sudo ifconfig
+```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
+Note that you will need root permissions to use this command in this image.
+
 ##Download Latest Image
 For this meetup, we are going to use the latest Debian Linux build for our projects. The Debian Linux builds can be found on the 96boards website at the following URL, http://builds.96boards.org/releases/dragonboard410c/linaro/debian
 
