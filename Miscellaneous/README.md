@@ -11,6 +11,14 @@ Update the system clock to a specified date or time by using the `set-time` opti
 ```
 sudo timedatectl set-time "2017-01-19 08:40:00"
 ```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-set-time.png "Set time")
+
+Time is 24 hour based so to set time for PM values, use 24 hour notation as shown below...
+```
+sudo timedatectl set-time "2017-01-19 22:40:00"
+```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-set-time2.png "Set time PM")
+
 ###Update the system time zone
 Use the `set-timezone` option followed by the time zone value to configure the time zone. To see a list of available time zones, use the flag/option `list-timezones`.
 
