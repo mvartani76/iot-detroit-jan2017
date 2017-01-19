@@ -14,14 +14,15 @@ Please note that at this current time, SPI functionality is not enabled. The boa
 
 After downloading the specific file from the 96boards site, we can then flash the Micro SD Card using a tool such as **Win32 Disk Imager** if using a PC.
 
-http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/latest_debian_image_location_96boards_flash_win32dskimager.png "Flashing Micro SD Card with Win32 Disk Imager")
 
 ##Set Date/Time/Timezone
 There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl`.
+
 ###Display system date/time information
 Simply run the command without and command line options to display the current time/date status
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-linux.png "Timedatectl")
+
 ###Update the system clock to a specificed date or time
 Update the system clock to a specified date or time by using the `set-time` option followed by a string containing the new date/time information in the format shown below. For example, to set the time to 8:40am on January 19, 2017, I used the following command.
 ```
