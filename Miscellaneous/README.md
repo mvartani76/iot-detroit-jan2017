@@ -1,6 +1,15 @@
 #Miscellaneous Dragonboard Tips/Tricks
 ##Configure WiFi
 ##Download Latest Image
+For this meetup, we are going to use the latest Debian Linux build for our projects. The Debian Linux builds can be found on the 96boards website at the following URL, http://builds.96boards.org/releases/dragonboard410c/linaro/debian
+
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/latest_debian_image_location_96boards.png "Location of Debian Images")
+
+The specific file that we will be using is shown here:
+
+http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/latest_debian_image_location_96boards_filename.png "Latest Debian Image")
+
 ##Set Date/Time/Timezone
 There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl`.
 ###Display system date/time information
