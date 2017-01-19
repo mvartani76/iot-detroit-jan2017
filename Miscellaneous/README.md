@@ -1,15 +1,4 @@
 #Miscellaneous Dragonboard Tips/Tricks
-##Connect to WiFi
-The Dragonboard410c has onboard single band 802.11n (WiFi) available.
-###Check WiFi Status
-You can check the status of the wifi connection via the command line by typing
-```
-sudo ifconfig
-```
-![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
-
-Note that you will need root permissions to use this command in this image.
-
 ##Download Latest Image
 For this meetup, we are going to use the latest Debian Linux build for our projects. The Debian Linux builds can be found on the 96boards website at the following URL, http://builds.96boards.org/releases/dragonboard410c/linaro/debian
 
@@ -26,6 +15,17 @@ Please note that at this current time, SPI functionality is not enabled. The boa
 After downloading the specific file from the 96boards site, we can then flash the Micro SD Card using a tool such as **Win32 Disk Imager** if using a PC.
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/latest_debian_image_location_96boards_flash_win32dskimager.png "Flashing Micro SD Card with Win32 Disk Imager")
+
+##Connect to WiFi
+The Dragonboard410c has onboard single band 802.11n (WiFi) available.
+###Check WiFi Status
+You can check the status of the wifi connection via the command line by typing
+```
+sudo ifconfig
+```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
+
+Note that you will need root permissions to use this command in this image.
 
 ##Set Date/Time/Timezone
 There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl`.
