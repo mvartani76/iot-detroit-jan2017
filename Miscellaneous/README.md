@@ -16,3 +16,18 @@ Use the `set-timezone` option followed by the time zone value to configure the t
 
 For example, here is a scrollable list of timezones produced when executing `timedatectl list-timezones`
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-listtimezones.png "Timedatectl list-timezones")
+
+##Configure NTP-based network time synchronization
+NTP, or Network Time Protocol, is a networking protocol for clock synchronization between computer systems over packet-switched, variable-latency data networks. It is intended to synchronize all participating computers to within a few milliseconds of UTC.
+
+The timedatectl command provides a set-ntp option that controls whether NTP based network time synchronization is enabled. This option expects a boolean argument. To enable NTP-based time synchronization, run the following command:
+
+```
+timedatectl set-ntp true
+```
+As you could probably guess, to disable NTP-based time synchronization, run the following command:
+
+```
+timedatectl set-ntp false
+```
+
