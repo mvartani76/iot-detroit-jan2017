@@ -2,7 +2,7 @@
 ##Configure WiFi
 ##Download Latest Image
 ##Set Date/Time/Timezone
-There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl'.
+There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl`.
 ###Display system date/time information
 Simply run the command without and command line options to display the current time/date status
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-linux.png "Timedatectl")
