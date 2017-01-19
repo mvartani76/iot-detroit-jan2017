@@ -6,7 +6,8 @@ There are various options/packages for configuring the time/date on a linux boar
 ###Display system date/time information
 Simply run the command without and command line options to display the current time/date status
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/timedatectl-linux.png "Timedatectl")
-###Update the system clock to a specificed date or time by using the `set-time` option following by a string containing the new date/time information in the format shown below. For example, to set the time to 8:40am on January 19, 2017, I used the following command.
+###Update the system clock to a specificed date or time
+Update the system clock to a specified date or time by using the `set-time` option followed by a string containing the new date/time information in the format shown below. For example, to set the time to 8:40am on January 19, 2017, I used the following command.
 ```
 sudo timedatectl set-time "2017-01-19 08:40:00"
 ```
