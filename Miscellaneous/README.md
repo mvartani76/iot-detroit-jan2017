@@ -7,6 +7,7 @@ You can check the status of the wifi connection via the command line by typing
 sudo ifconfig
 ```
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
+
 Note that you will need root permissions to use this command in this image.
 
 ##Download Latest Image
