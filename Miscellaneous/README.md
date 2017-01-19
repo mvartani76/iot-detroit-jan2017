@@ -20,13 +20,13 @@ After downloading the specific file from the 96boards site, we can then flash th
 The Dragonboard410c has onboard single band 802.11n (WiFi) available.
 
 ###Connect to WiFi
------------- | -------------
-You should see the wireless network indicator in the bottom right corner
- | ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
-Click on the wireless network indicator and select the appropriate wireless network
- | Content in the second column
- Enter the network credentials (if applicable) at the prompt, and click “Connect”
-| Content in the second column
+|------------ | -------------|
+|You should see the wireless network indicator in the bottom right corner
+ | ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")|
+|Click on the wireless network indicator and select the appropriate wireless network
+ | Content in the second column|
+ |Enter the network credentials (if applicable) at the prompt, and click “Connect”
+| Content in the second column|
 
 ###Check WiFi Status
 You can check the status of the wifi connection via the command line by typing
