@@ -29,6 +29,18 @@ This folder contains the images used in the README files.
 This folder contains information and example python code for interfacing with the Linker Mezzanine Card Starter Kit.
 ###Messaging
 This folder contains information and example python code for sending SMS/MMS messages via Twilio.
+##
 ###SmartSurveillance
 This folder contains the code that pulls all of the concepts together to create a system that sends MMS alerts to a phone based on either motion or facial detection.
 
+##Quick Start
+Grab the code used in this meetup by cloning this directory from your Dragonboard
+```
+git clone https://github.com/mvartani76/iot-detroit-jan2017
+```
+This will create a directory called **iot-detroit-jan2017**
+
+Navigate to this directory
+```
+cd iot-detroit-jan2017
+```
