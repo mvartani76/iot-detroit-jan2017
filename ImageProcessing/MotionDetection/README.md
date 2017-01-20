@@ -18,7 +18,7 @@ This code makes the assumption that the first frame of our video file will conta
 
 ##Integrate I/O Functionality
 The following files augment **motion_detector_statif_ref.py** by adding some IO control to the motion detector parameters
-- **motion_detector_static_ref_button** - This code is an extension of **motion_detector_static_ref.py** that adds the GPIO functionality to update the reference frame based on a button press.
+- **motion_detector_static_ref_button.py** - This code is an extension of **motion_detector_static_ref.py** that adds the GPIO functionality to update the reference frame based on a button press.
 
 The following code snippet checks to see if the reference frame has been initialized as shown in the code snippet below.
 
