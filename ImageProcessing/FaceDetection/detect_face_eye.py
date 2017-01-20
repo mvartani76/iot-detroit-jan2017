@@ -67,7 +67,7 @@ while retval:
 
 	# Exit program if the ESCAPE key is pressed
 	if cv2.waitKey(1) == 27:
-		breal
+		break
 
 	i += 1
 
