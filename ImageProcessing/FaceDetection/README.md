@@ -1,4 +1,4 @@
-#Face Detection
+#Face & Eye Detection
 This repository contains information and example code on how to perform face detection using Haar Feature-based Cascade Classifiers.
 
 ##Pre-trained classifiers
@@ -40,3 +40,7 @@ else:
 	print "Error: XML path not defined"
 	sys.exit(1)
   ```
+##Results
+|detect_face.py|detect_face_eye.py|
+|:------------:|:-------------:|
+|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_detect_result.png "Face Detection Result")| ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_detect_eye_result.png "Face & Eye Detection Result")|
