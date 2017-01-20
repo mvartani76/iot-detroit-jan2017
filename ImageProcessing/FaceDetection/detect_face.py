@@ -59,10 +59,12 @@ while retval:
 	# Read in the next frame
 	retval, frame = vc.read()
 
-	# Exit program if the ESCAPE key is pressed
-	if cv2.waitKey(1) == 27:
+	# if the `q` key is pressed, break from the loop
+	key = cv2.waitKey(1) & 0xFF
+	if key == ord("q"):
 		break
 
 	i += 1
 
-
+vc.release()
+cv2.destroyAllWindows()
