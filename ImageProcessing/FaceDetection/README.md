@@ -27,6 +27,8 @@ faceCascade = cv2.CascadeClassifier(FACE_XML_PATH)
 eyeCascade = cv2.CascadeClassifier(EYE_XML_PATH)
 ```
 
+Further information on the **CascadeClassifier** class can be found at http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html.
+
 ##Detecting Objects (Faces & Eyes)
 Objects are detected using the **detectMultiScale()** method as shown in the code snippets below.
 
@@ -56,6 +58,10 @@ and
 ```python
 eyes = eyeCascade.detectMultiScale(roi_frame)
 ```
+
+Further information on the **detectMultiScale()** method can be found at
+http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html
+
 ##Executing the Python Program(s)
 The Python Programs can be called from the command line using the following syntax.
 
