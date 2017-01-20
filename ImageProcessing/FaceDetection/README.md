@@ -5,8 +5,8 @@ This repository contains information and example code on how to perform face det
 Cascade Classifiers are a series of feature models for some sort of object image (in this case, a face or an eye). The models are separated into a series of models to improve efficiency. A majority of the time, most of the image will not be the object in question, so we start with very quick feature models that can quickly thow out regions as false. When we get to an area that is the object in question, the classifier will "cascade" or traverse through the series of feature models to determine if the object (face or eye) is detected. The object is detected if it passes through all the stages.
 
 More information can be found in the following links:
-http://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html
-https://en.wikipedia.org/wiki/Cascading_classifiers
+- http://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html
+- https://en.wikipedia.org/wiki/Cascading_classifiers
 
 ##Pre-trained classifiers
 OpenCV already comes with many pre-trained classifiers for faces, eyes, smiles, objects, etc. In our examples we will use the pre-trained classifiers for the face and eyes.
