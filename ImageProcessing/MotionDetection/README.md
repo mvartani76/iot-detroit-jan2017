@@ -1,6 +1,7 @@
 #Motion Detection
-Repository for Motion Detector Code
+This repository contains information and example code on how to perform motion detection using various background subtraction techniques.
 
+##Pre-requisites
 Need to install `imutils` in order to use some of the convenience functions in the code below.
 
 ```
