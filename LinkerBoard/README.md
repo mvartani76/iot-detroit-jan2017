@@ -41,10 +41,6 @@ sudo apt-get install libtool-bin
 sudo apt-get install python-dev
 ```
 
-git clone https://github.com/mvartani76/iot-detroit-jan2017
-
-cd iot-detroit-jan2017
-
 Grab the libsoc code from Github...
 ```
 git clone https://github.com/jackmitch/libsoc
