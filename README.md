@@ -29,7 +29,8 @@ This folder contains the images used in the README files.
 This folder contains information and example python code for interfacing with the Linker Mezzanine Card Starter Kit.
 ###Messaging
 This folder contains information and example python code for sending SMS/MMS messages via Twilio.
-##
+###Miscellaneous
+This folder contains various tips on using the dragonboard such as connecting to WiFi or flashing linux onto the dragonboard.
 ###SmartSurveillance
 This folder contains the code that pulls all of the concepts together to create a system that sends MMS alerts to a phone based on either motion or facial detection.
 
