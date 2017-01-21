@@ -19,7 +19,7 @@ This code makes the assumption that the first frame of our video file will conta
 ##Integrate I/O Functionality
 The following files augment **motion_detector_statif_ref.py** by adding some IO control to the motion detector parameters
 - **motion_detector_static_ref_button.py** - This code adds the GPIO functionality to update the reference frame based on a button press.
-- **motion_detector_static_ref_pot.py** - This code uses the ADC/SPI interface to adjust the "min_area" parameter using the sliding potentiometer.
+- **motion_detector_static_ref_pot.py** - This code uses the ADC/SPI interface to adjust the "min_area" parameter using the sliding potentiometer. Please note that the SPI interface is supported on the Dragonboard/Snapdragon processor while the Linker Mezzanine Card contains a Microchip 10-bit ADC that communicates to the Dragonboard via SPI. The datasheet for the MPC3004 contained in the Mezzanine Card is available here: http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf.
 
 ###motion_detector_static_ref_button.py
 The following code snippet checks to see if the reference frame has been initialized as shown in the code snippet below.
