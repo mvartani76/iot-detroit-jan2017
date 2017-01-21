@@ -22,7 +22,15 @@ The following files augment **motion_detector_statif_ref.py** by adding some IO 
 - **motion_detector_static_ref_pot.py** - This code uses the ADC/SPI interface to adjust the "min_area" parameter using the sliding potentiometer. Please note that the SPI interface is supported on the Dragonboard/Snapdragon processor while the Linker Mezzanine Card contains a Microchip 10-bit ADC that communicates to the Dragonboard via SPI. The datasheet for the MPC3004 contained in the Mezzanine Card is available here: http://ww1.microchip.com/downloads/en/DeviceDoc/21295C.pdf.
 
 ###motion_detector_static_ref_button.py
-The following code snippet checks to see if the reference frame has been initialized as shown in the code snippet below.
+The following code snippets show the additions/modifications needed to incorporate GPIO functionality into the motion detection code.
+
+First, we need to include the necessary libraries...
+```python
+from libsoc_zero.GPIO import Button
+from time import sleep
+```
+
+The following code is in the initial but is just to remind the reader that the program checks to see if the reference frame has been initialized as shown in the code snippet below.
 
 ```python
 	# if the first frame is None, initialize it
@@ -31,7 +39,7 @@ The following code snippet checks to see if the reference frame has been initial
 		continue
 ```
 
-So we can update this reference frame by setting firstFrame to None which is what we do in the callback function shown below.
+We can update this reference frame by setting firstFrame to None which is what we do in the callback function shown below.
 
 ```python
 # Button Callback function to create new reference frame, firstFrame
@@ -48,3 +56,40 @@ And finally we register the callback function, ```btn_cb``` with the GPIO as sho
 btnA = Button("GPIO-A")
 btnA.when_pressed(btn_cb)
 ```
+###motion_detector_static_ref_pot.py
+The following code snippets show the additions/modifications needed to incorporate the ADC/SPI potentiometer into the motion detection code.
+
+First we need to import the spidev library.
+```python
+import spidev
+```
+
+Next we need to configure the SPI.
+```python
+# configure SPI
+spi = spidev.SpiDev()
+spi.open(0,0)
+channel_select = [0x01, 0x80, 0x00]
+```
+
+In the main loop we read in the adc data from the linker mezzanine card via SPI as shown below.
+```python
+# read in adc data
+adc_data = spi.xfer2(channel_select)
+adc = ((adc_data[1]<<8)&0x300)|(adc_data[2]&0xFF)
+```
+
+Based on a bit of empirical testing, set the min_area range to be between 200 (easy to detect motion) to 30,980 (difficult to detect motion).
+```python
+# min_area range is from 200 to 30,890	
+min_area = round(200 + adc * 30)
+```
+
+We then modify the contourArea check to compare to ```min_area``` instead of ```args["min_area"]```, which is the command line parameter input.
+```python
+# if the contour is too small, ignore it
+# min_area derived from potentiometer
+if cv2.contourArea(c) < min_area:
+	continue
+```
+The code above is in a loop for all countours and if the specific contour area is less than min_area, it continues to the next iteration of the loop.
