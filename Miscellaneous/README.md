@@ -19,7 +19,7 @@ After downloading the specific file from the 96boards site, we can then flash th
 ##Flashing Linux onto Dragonboard 410c
 <ol>
   <li>Unplug every adapter and cord from the DragonBoard 410c, then insert the microSD card that contains the version of Linux that you   desire (currently Ubuntu and Debian available)</li>
-  <li>Set the S6 switch on the DragonBoard 410c to 0-1-1-0 (SD Boot and USB Host switches set to “ON”)</li>
+  <li>Set the S6 switch on the DragonBoard 410c to <strong>0-1-1-0</strong> (SD Boot and USB Host switches set to “ON”)</li>
   <span style="text-align:center"><img src="https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-s6-0110.png"></span>
   <li>Plug a USB mouse into either of the two USB connectors on the DragonBoard 410c</li>
   <li>Connect an HDMI monitor to the DragonBoard 410c with an HDMI cable and turn the monitor on</li>
@@ -29,7 +29,8 @@ After downloading the specific file from the 96boards site, we can then flash th
   <li>Remove the SD card</li>
   <li>When you are ready, press OK to reboot</li>
   <li>Disconnect the power cable from the DragonBoard 410c</li>
-  <li>Set the S6 switches so that ONLY “USB Host” is enabled (0-0-1-0)</li>
+  <li>Set the S6 switches so that ONLY “USB Host” is enabled (<strong>0-0-1-0</strong>)</li>
+    <span style="text-align:center"><img src="https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-s6-0010.png"></span>
   <li>Reconnect the power cable to the DragonBoard 410c which will reboot into Debian</li>
 </ol>
 ##WiFi
