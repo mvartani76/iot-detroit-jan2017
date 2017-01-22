@@ -17,7 +17,7 @@ After downloading the specific file from the 96boards site, we can then flash th
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/latest_debian_image_location_96boards_flash_win32dskimager.png "Flashing Micro SD Card with Win32 Disk Imager")
 
 ##WiFi
-The Dragonboard410c has onboard single band 802.11n (WiFi) available.
+The Dragonboard410c has onboard single band 802.11b/g/n (WiFi) available.
 
 ###Connect to WiFi
 |Steps|Screenshot Image|
