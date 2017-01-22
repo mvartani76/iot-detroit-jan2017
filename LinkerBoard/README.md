@@ -91,16 +91,59 @@ pip install spidev
 ```
 ##Code Examples
 ###button_press_monitor.py
-This code just sets up an infinite loop and checks to if a button is pressed as shown in the snippet below.
+This code just sets up an infinite loop and checks to see if a button is pressed as shown in the snippet below.
 ```python
 while True:
 	sleep(0.25)
 	if btnA.is_pressed():
 		print("Button A is pressed")
 ```
-The code is run by invoking the following...
+The code is run by typing the following...
 ```
 sudo python button_press_monitor.py
 ```
 The code output is shown below...
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linkerboard_button_press_monitor.png "button_press_monitor.py results")
+###wait_for_button_press.py
+This code has the same purpose as above but uses interrupts/callback functions for interacting with the button press. The following code snippet shows the callback function, initiating the ```when_pressed()```, and the conditional exit based on keyboard interrupt.
+```python
+def btn_cb():
+	print("Button Pressed!")
+
+def pause():
+	program_pause = raw_input("")
+
+btnA = Button("GPIO-A")
+
+btnA.when_pressed(btn_cb)
+
+print("Waiting for button press event...")
+try:
+	pause()
+except KeyboardInterrupt:
+	print("Program Closed")
+	btnA.close()
+	pass
+```
+The code is run by typing the following...
+```
+sudo python wait_for_button_press.py
+```
+The code output is shown below...
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linkerboard_waitforbuttonpress.png "wait_for_button_press.py results")
+###spi_monitor.py
+This code utilizes the dragonboard SPI to interface with the ADC on the linkerboard mezzanine card. The following code snippet shows the configuration of the SPI and the infinite loop that reads/formats the data from the ADC/SPI...
+```python
+spi = spidev.SpiDev()
+spi.open(0,0)
+channel_select = [0x01, 0x80, 0x00]
+
+while True:
+	adc_data = spi.xfer2(channel_select)
+	adc = ((adc_data[1]<<8)&0x300)|(adc_data[2]&0xFF)
+	print(round((adc / 1023.0) * 100))
+	sleep(0.5)
+```
+Note that the ADC is a 10 bit ADC and therefore the maximum number is 1023.
+The code output is shown below...
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linkerboard_spimonitor.png "spi_monitor.py results")
