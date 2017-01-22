@@ -93,9 +93,18 @@ if cv2.contourArea(c) < min_area:
 	continue
 ```
 The code above is in a loop for all countours and if the specific contour area is less than min_area, it continues to the next iteration of the loop.
-##Results
+##Results, Observations, and Commentary
+###Calling the motion detection code
+Invoking the motion detction code below
+```
+sudo python motion_detector_static_ref_button.py -a 5000
+```
+###Results
 |Description|Reference Frame|Frame Delta|Thresh|Result|
 |------------|:-------------:|:-------------:|:-------------:|:-------------:|
 |Unoccupied|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_reference_frame_unoccupied.png "Reference Frame")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_frame_delta_unoccupied.png "Unoccupied Frame Delta")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_thresh_unoccupied.png "Unoccupied Thresh")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_live_feed_unoccupied.png "Unoccupied Result")|
 |Occupied Small Contrast|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_reference_frame_unoccupied.png "Reference Frame")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_frame_delta_occupied_1.png "Small Contrast Occupied Frame Delta")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_thresh_occupied_1.png "Small Contrast Occupied Thresh")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_live_feed_occupied_1.png "Small Contrast Occupied Result")|
 |Occupied Large Contrast|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_reference_frame_unoccupied.png "Reference Frame")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_frame_delta_occupied_2.png "Large Contrast Occupied Frame Delta")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_thresh_occupied_2.png "Large Contrast Occupied Thresh")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_live_feed_occupied_2.png "Large Contrast Occupied Result")|
+###Observations and Commentary
+The results show that the algorithm works best when there is large contrast (or differences) between current and reference frame as shown in the image where I am standing in front of a window. When I am standing in front of the wall, there are some pixel differences but they are smaller grayscale changes compared to when I am standing in front of the window.
+This algorithm also suffers from the static reference frame. As we know there will be changes in lighting conditions over time which will skew the results (shadows, etc.).
