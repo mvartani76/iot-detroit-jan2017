@@ -8,8 +8,8 @@ The DragonBoard 410c, a product of Arrow Electronics, is the development board b
 
 ##Meetup Goal
 During the meetup we will attempt to cover the basic features of the Dragonboard as well as the following high level concepts:
+- Python / Linux
 - Linker Mezzanine Card (LS Expansion Header)
-- Python
 - OpenCV
   - Facial Detection
   - Motion Detection
@@ -48,6 +48,7 @@ First we will need to make sure we are using the latest Debian Linux image. The 
 ##Connect to WiFi
 As we are going to need to download content/code from the internet, we are going to need to connect to a local wifi network as shown in the instructions [here](Miscellaneous/WiFi.md)
 
+##Git the code
 Grab the code used in this meetup by cloning this directory from your Dragonboard
 ```
 git clone https://github.com/mvartani76/iot-detroit-jan2017
@@ -58,3 +59,4 @@ Navigate to this directory
 ```
 cd iot-detroit-jan2017
 ```
+We are now ready to begin looking through the code and configuring our setup to run the various examples.
