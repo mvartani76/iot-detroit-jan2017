@@ -60,3 +60,14 @@ Navigate to this directory
 cd iot-detroit-jan2017
 ```
 We are now ready to begin looking through the code and configuring our setup to run the various examples.
+
+##Using the Linker Mezzanine Card
+We will first look at interacting with some of the peripherals of the board using the Linker Mezzanine Card Starter Kit as shown [here](LinkerBoard/README.md)
+##Image Processing
+Next we will explore some Image Processing concepts [here](ImageProcessing/README.md)
+##Using Twilio
+Then we will set up a Twilio account to send SMS/MMS messages [here](Messaging/README.md)
+##AWS S3
+As we observed some of the requirements of sending MMS messages, we will learn to set up and configure an S3 bucket and interface via Python [here](AWS_s3/README.md)
+##Smart Surveillance
+We then put it all together and create a simple smart surveillance system using the concepts we previously learned [here](SmartSurveillance/README.md)
