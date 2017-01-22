@@ -89,3 +89,18 @@ Okay so now that we have that out of the way, we enable SPI functionality by exe
 ```
 pip install spidev
 ```
+##Code Examples
+###button_press_monitor.py
+This code just sets up an infinite loop and checks to if a button is pressed as shown in the snippet below.
+```python
+while True:
+	sleep(0.25)
+	if btnA.is_pressed():
+		print("Button A is pressed")
+```
+The code is run by invoking the following...
+```
+sudo python button_press_monitor.py
+```
+The code output is shown below...
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linkerboard_button_press_monitor.png "button_press_monitor.py results")
