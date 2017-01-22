@@ -8,8 +8,8 @@ The DragonBoard 410c, a product of Arrow Electronics, is the development board b
 
 ##Meetup Goal
 During the meetup we will attempt to cover the basic features of the Dragonboard as well as the following high level concepts:
+- Python / Linux
 - Linker Mezzanine Card (LS Expansion Header)
-- Python
 - OpenCV
   - Facial Detection
   - Motion Detection
@@ -29,11 +29,26 @@ This folder contains the images used in the README files.
 This folder contains information and example python code for interfacing with the Linker Mezzanine Card Starter Kit.
 ###Messaging
 This folder contains information and example python code for sending SMS/MMS messages via Twilio.
-##
+###Miscellaneous
+This folder contains various tips on using the dragonboard such as connecting to WiFi or flashing linux onto the dragonboard.
 ###SmartSurveillance
 This folder contains the code that pulls all of the concepts together to create a system that sends MMS alerts to a phone based on either motion or facial detection.
 
-##Quick Start
+#Quick Start
+##Download and Flash Debian Linux Image onto Dragonboard 410c
+First we will need to make sure we are using the latest Debian Linux image. The instructions for how to do this are given in the following links below.
+
+- [Download Latest Image](Miscellaneous/DownloadLatestImage.md)
+   - Shows where the latest Dragonboard Images from 96boards.org are located and which one we are using for this project.
+- [Writing Image to Micro SD Card](Miscellaneous/WriteImagetoMicroSD.md)
+   - Shows how to write the downloaded Dragonboard image to a Micro SD card.
+- [Flash Image onto Dragonboard 410c](Miscellaneous/FlashLinuxOntoDragonBoard.md)
+   - Gives step by step instructions how to configure and flash an image onto the Dragonboard.
+
+##Connect to WiFi
+As we are going to need to download content/code from the internet, we are going to need to connect to a local wifi network as shown in the instructions [here](Miscellaneous/WiFi.md)
+
+##Git the code
 Grab the code used in this meetup by cloning this directory from your Dragonboard
 ```
 git clone https://github.com/mvartani76/iot-detroit-jan2017
@@ -44,3 +59,4 @@ Navigate to this directory
 ```
 cd iot-detroit-jan2017
 ```
+We are now ready to begin looking through the code and configuring our setup to run the various examples.
