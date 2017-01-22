@@ -36,24 +36,6 @@ After downloading the specific file from the 96boards site, we can then flash th
     <span style="text-align:center"><img src="https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-s6-0010.png"></span>
   <li>Reconnect the power cable to the DragonBoard 410c which will reboot into Debian</li>
 </ol>
-##WiFi
-The Dragonboard410c has onboard single band 802.11b/g/n (WiFi) available.
-
-###Connect to WiFi
-|Steps|Screenshot Image|
-|------------ |:-------------:|
-|You should see the wireless network indicator in the bottom right corner | ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linaro-wifi-indicator-toolbar.png "WiFi Indicator Toolbar")|
-|Click on the wireless network indicator and select the appropriate wireless network | ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linaro-wifi-networks.png "Available WiFi Networks")|
-|Enter the network credentials (if applicable) at the prompt, and click “Connect”| ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/linaro-wifi-authentication.png "Enter WiFi Credentials")|
-
-###Check WiFi Status
-You can check the status of the wifi connection via the command line by typing
-```
-sudo ifconfig
-```
-![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/wifi_status.png "Checking WiFi Status on the Dragonboard")
-
-Note that you will need root permissions to use this command in this image.
 
 ##Set Date/Time/Timezone
 There are various options/packages for configuring the time/date on a linux board. The command utility that I used for this is `timedatectl`.
@@ -94,4 +76,3 @@ As you could probably guess, to disable NTP-based time synchronization, run the 
 ```
 timedatectl set-ntp false
 ```
-
