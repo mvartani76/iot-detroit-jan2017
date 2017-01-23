@@ -32,4 +32,4 @@ python face_eye_surveillance.py haarcascade_frontalface_default.xml haarcascade_
 ##Results
 |Description|OpenCV Screenshot|MMS Alert Screenshot|
 |------------|:-------------:|:-------------:|
-|Unoccupied|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_result.jpg "Face/Eye Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_mms_alert.PNG "Face/Eye Surveillance MMS Alert")|
+|Unoccupied|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_result.jpg "Face/Eye Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_mms_alert_small.png "Face/Eye Surveillance MMS Alert")|
