@@ -22,6 +22,21 @@ We use the latter option in our examples...
 ```
 camera = cv2.VideoCapture(0)
 ```
+###Displaying Video/Image
+The function prototype from the OpenCV 2.4.9 Documentation located at http://docs.opencv.org/2.4.9/modules/highgui/doc/user_interface.html?highlight=imshow#imshow is shown here
+```
+cv2.imshow(winname, mat) → None
+```
+with the following parameters:
+```
+Parameters:	
+winname – Name of the window.
+image – Image to be shown.
+```
+An example of this function used in the motion detector code is shown below...
+```
+cv2.imshow("Security Feed", frame)
+```
 ###Convert Image from One Color Space to Another
 The function prototype from the OpenCV 2.4.9 Documentation located at http://docs.opencv.org/2.4.9/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor is shown here
 ```
