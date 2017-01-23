@@ -29,3 +29,7 @@ We can start the face/eye detection based smart surveillance program by calling 
 ```
 python face_eye_surveillance.py haarcascade_frontalface_default.xml haarcascade_eye.xml
 ```
+##Results
+|Description|OpenCV Screenshot|MMS Alert Screenshot|
+|------------|:-------------:|:-------------:|
+|Unoccupied|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_result.jpg "Face/Eye Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_mms_alert.PNG "Face/Eye Surveillance MMS Alert")|
