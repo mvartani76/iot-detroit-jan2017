@@ -14,6 +14,7 @@ As of the time of this exercise, the above command installed Python OpenCV 2.4.9
 The following folders contain various image processing aspects
 - FaceDetection - This folder contains face and eye detection code using Cascade Classifiers
 - MotionDetection - This folder contains a variety of motion detection algorithms
+
 ##Various OpenCV functions
 ###Capturing Video from File or Device
 The function prototype from the OpenCV 2.4.9 Documentation located at http://docs.opencv.org/2.4.9/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture is shown here
