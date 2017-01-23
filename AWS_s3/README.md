@@ -55,3 +55,14 @@ We will install the python s3 SDK using the PIP tool
 ```
 pip install boto
 ```
+##Running the Program
+We run the program to upload a file to S3 by calling the following
+```
+python aws_s3_file_upload.py
+```
+We need to make sure that the variables/fields ```REGION_HOST``` and ```your-file-to-upload``` are also set prior to running
+```python
+REGION_HOST = "your-region-host"
+
+s3_key = upload_file_to_s3("your-file-to-upload", s3_bucket)
+```
