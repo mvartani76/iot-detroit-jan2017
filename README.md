@@ -5,7 +5,8 @@ Repository for presentation, code, and documentation for the January 2017 IoT-De
 The DragonBoard 410c, a product of Arrow Electronics, is the development board based on the mid-tier Qualcomm® Snapdragon™ 410E processor. It features advanced processing power, Wi-Fi, Bluetooth connectivity, and GPS, all packed into a board the size of a credit card.
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-img2.jpg "Dragonboard 410c")
-
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-overview.jpg "Dragonboard 410c Overview 1")
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/dragonboard410c-overview2.jpg "Dragonboard 410c Overview 2")
 ##Meetup Goal
 During the meetup we will attempt to cover the basic features of the Dragonboard as well as the following high level concepts:
 - Python / Linux
