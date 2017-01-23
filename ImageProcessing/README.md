@@ -13,7 +13,7 @@ As of the time of this exercise, the above command installed Python OpenCV 2.4.9
 
 ##Various OpenCV functions
 ###Convert Image from One Color Space to Another
-The function prototype from the OpenCV 2.4.9 Documentation from http://docs.opencv.org/2.4.9/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor is shown here
+The function prototype from the OpenCV 2.4.9 Documentation located at http://docs.opencv.org/2.4.9/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor is shown here
 ```
 cv2.cvtColor(src, code[, dst[, dstCn]]) → dst
 ```
