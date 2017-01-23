@@ -6,6 +6,7 @@ aws_access_key_id = "your-aws-access-key-id"
 aws_secret_key = "your-aws-secret-key"
 
 # Set the Host to get around 400 Bad Request Error
+# Example format something like -> "s3.us-east-2.amazonaws.com"
 REGION_HOST = "your-region-host"
 
 
