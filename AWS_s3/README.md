@@ -55,6 +55,7 @@ We will install the python s3 SDK using the PIP tool
 ```
 pip install boto
 ```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/pip-install-boto.jpg "pip install boto")
 ##Running the Program
 We run the program to upload a file to S3 by calling the following
 ```
