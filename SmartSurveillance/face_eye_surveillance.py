@@ -3,7 +3,6 @@
 # import the necessary packages
 import argparse
 import datetime
-import imutils
 import time
 import cv2
 import sys
@@ -122,14 +121,12 @@ else:
 
 i= 0
 faces = []
-prev_state = 0
+state = 0
 
 # If the webcam read is successful, loop indefinitely
 while retval:
 	# Define the frame which the program will show
 	frame_show = frame
-
-	state = 0
 
 	if i % 5 == 0:
 		# Convert frame to grayscale to perform facial detection
@@ -143,25 +140,30 @@ while retval:
 			minSize=(50, 50),
 			flags=cv2.cv.CV_HAAR_SCALE_IMAGE
 		)
-		if len(faces) == 1:
-		# Draw a rectangle around the faces
-			for (x, y, w, h) in faces:
-				cv2.rectangle(frame_show, (x, y), (x+w, y+h), (0, 0, 255), 2)
-				roi_frame = frame_show[y:y+h, x:x+w]
-				eyes = eyeCascade.detectMultiScale(roi_frame)
-				for (ex, ey, ew, eh) in eyes:
-					cv2.rectangle(roi_frame, (ex, ey), (ex+ew, ey+eh), (0,255,0), 2)
-				if len(eyes) == 2:
-					state = 1
-					if (state - prev_state) > 0:
-						img_file = "img-%s.jpg"%datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-						cv2.imwrite(img_file, frame)
-						send(img_file, s3_bucket)
-				else:
+	if len(faces) == 1:
+	# Draw a rectangle around the faces
+		for (x, y, w, h) in faces:
+			cv2.rectangle(frame_show, (x, y), (x+w, y+h), (0, 0, 255), 2)
+			roi_frame = frame_show[y:y+h, x:x+w]
+			eyes = eyeCascade.detectMultiScale(roi_frame)
+			for (ex, ey, ew, eh) in eyes:
+				cv2.rectangle(roi_frame, (ex, ey), (ex+ew, ey+eh), (0,255,0), 2)
+			# Only send an alert if we detect 2 eyes and 1 face
+			if len(eyes) == 2:
+				state = state + 1
+				# draw the text and timestamp on the frame
+				cv2.putText(frame, "State Value: {}".format(state), (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+				# Make sure that it is really an accurate detection by
+				# checking if it meets the condition for at 10 frames
+				if state > 10:
+					img_file = "img-%s.jpg"%datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+					cv2.imwrite(img_file, frame)
+					send(img_file, s3_bucket)
+					# Set the state variable back to 0 so it does not
+					# fire successive alerts
 					state = 0
-
-	# Store current state into previous state
-	prev_state = state
+			else:
+				state = 0
 
 	# Show the frame on the screen
 	cv2.imshow("DragonBoard 410c Workshop", frame_show)
