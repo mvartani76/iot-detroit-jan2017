@@ -18,6 +18,7 @@ Use the Python Package Manager, PIP, to install the library on our Dragonboard 4
 ```
 pip install twilio
 ```
+![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/pip-install-twilio.png "pip install twilio")
 ###Needed Twilio Credentials
 To enable the Python code to connect to your Twilio account, we need to grab the **Account SID** and **Auth Token** from the Twilio Console shown below.
 
