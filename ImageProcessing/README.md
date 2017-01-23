@@ -31,3 +31,22 @@ This is done in the motion detection code as shown below...
 ```
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 ```
+###Thresholding Images
+The function prototype from the OpenCV 2.4.9 Documentation located at http://docs.opencv.org/2.4.9/modules/imgproc/doc/miscellaneous_transformations.html#threshold is shown here
+```
+cv2.threshold(src, thresh, maxval, type[, dst]) → retval, dst
+```
+with the following parameters:
+```
+Parameters:	
+src – input array (single-channel, 8-bit or 32-bit floating point).
+dst – output array of the same size and type as src.
+thresh – threshold value.
+maxval – maximum value to use with the THRESH_BINARY and THRESH_BINARY_INV thresholding types.
+type – thresholding type (see the details below).
+```
+Below is an example of how the threshold function is used in the motion detection code
+```
+thresh = cv2.threshold(frameDelta, 25, 255, cv2.THRESH_BINARY)[1]
+```
+This example sets pixel values less than 25 to 0 and above 25 to 255.
