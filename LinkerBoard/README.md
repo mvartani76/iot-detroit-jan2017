@@ -41,11 +41,14 @@ sudo apt-get install libtool-bin
 sudo apt-get install python-dev
 ```
 
-Grab the libsoc code from Github...
+Grab the libsoc code from Github... This can be done from the base iot-detroit-jan2017 directory...
 ```
 git clone https://github.com/jackmitch/libsoc
 ```
+Navigate to the newly created libscoc directory.
+```
 cd libsoc
+```
 
 Configure/install the libsoc build scripts using autoreconf
 
