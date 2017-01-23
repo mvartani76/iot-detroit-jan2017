@@ -4,7 +4,7 @@ This directory contains two files that bring together all the various topics we 
 
 `motion_surveillance.py` utilizes the motion detection algorithms to trigger the alert while `face_eye_surveillance.py` utilizes the face and eye detection algorithms to trigger the alert.
 
-**PLEASE NOTE THAT YOU NEED TO RUN THROUGH ALL THE VARIOUS EXERCISES PRIOR TO THIS TO GET THIS TO WORK AS THERE ARE SEVERAL REQUIRED PACKAGES THAT ARE INSTALLED IN THESE OTHER EXERCISES!**
+**PLEASE NOTE THAT YOU NEED TO RUN THROUGH ALL THE VARIOUS EXERCISES PRIOR TO THIS TO GET THIS TO WORK AS THERE ARE SEVERAL REQUIRED PACKAGES THAT ARE INSTALLED AS WELL AS SERVICE CREDENTIALS CREATED/USED IN THESE OTHER EXERCISES THAT NEED TO BE USED HERE AS WELL!**
 
 ##face_eye_surveillance.py
 This code utilizes the face and eye detection algorithms to trigger an alert. In order increase the confidence in the detection algorithm, I added some code that made sure that we detected 1 face and 2 eyes for 10 successive frames as shown in the code snippet below.
@@ -64,4 +64,4 @@ sudo python motion_surveillance.py -a 5000
 |Description|OpenCV Screenshot|MMS Alert Screenshot|
 |------------|:-------------:|:-------------:|
 |face_eye_surveillance|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_result.jpg "Face/Eye Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_mms_alert_small.png "Face/Eye Surveillance MMS Alert")|
-|motion_surveillance|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/face_eye_surveillance_result.jpg "Face/Eye Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_surveillance_mms_alert_small.png "Motion Surveillance MMS Alert")|
+|motion_surveillance|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_surveillance_result1.jpg "Motion Surveillance Screenshot") ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_surveillance_result2.jpg "Motion Surveillance Screenshot")|![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/motion_surveillance_mms_alert_small.png "Motion Surveillance MMS Alert")|
