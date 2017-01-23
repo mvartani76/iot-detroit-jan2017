@@ -91,7 +91,8 @@ while True:
 	# show the frame and record if the user presses a key
 	cv2.imshow("Security Feed", frame)
 	cv2.imshow("Thresh", thresh)
-	cv2.imshow("First Frame", firstFrame)
+	if firstFrame != None:
+		cv2.imshow("First Frame", firstFrame)
 	cv2.imshow("Frame Delta", frameDelta)
 
 	key = cv2.waitKey(1) & 0xFF
