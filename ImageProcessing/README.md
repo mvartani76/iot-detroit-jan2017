@@ -10,3 +10,24 @@ sudo apt-get install python-opencv
 As of the time of this exercise, the above command installed Python OpenCV 2.4.9.1 as shown below.
 
 ![alt text](https://github.com/mvartani76/iot-detroit-jan2017/blob/master/Images/python-opencv-install-jan2017.png "Python OpenCV Install")
+
+##Various OpenCV functions
+###Convert Image from One Color Space to Another
+The function prototype from the OpenCV 2.4.9 Documentation from http://docs.opencv.org/2.4.9/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor is shown here
+```
+cv2.cvtColor(src, code[, dst[, dstCn]]) → dst
+```
+with the following parameters:
+```
+Parameters:	
+src – input image: 8-bit unsigned, 16-bit unsigned ( CV_16UC... ), or single-precision floating-point.
+dst – output image of the same size and depth as src.
+code – color space conversion code (see the description below).
+dstCn – number of channels in the destination image; if the parameter is 0, the number of the channels is derived automatically from src and code .
+```
+In order to reduce computational complexity and potentially improve performance, many image processing algorithms convert the images to grayscale.
+
+This is done in the motion detection code as shown below...
+```
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+```
