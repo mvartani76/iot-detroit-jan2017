@@ -35,7 +35,23 @@ Bucket policies are written in JSON and you can use this template as a guide:
 
 Save the policy and the bucket should be configured to allow public access to retrieve files.
 
+After we have successfully created the buckey, we need to note this name as we will use it in the code shown below.
+```python
+s3_bucket = "your-s3-bucket-name"
+```
+
 ##Security Credentials
 To access the S3 bucket from the python application, we need an aws access key and secret which can be created in the Security Credentials page of the AWS Management Console.
 
 Click Show Access Key and we can keep our values for our AWS credentials or download the root key csv file.
+
+You will use these key values in your code shown below.
+```python
+aws_access_key_id = "your-aws-access-key-id"
+aws_secret_key = "your-aws-secret-key"
+```
+##Install Python S3 SDK
+We will install the python s3 SDK using the PIP tool
+```
+pip install boto
+```
