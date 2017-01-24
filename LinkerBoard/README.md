@@ -45,7 +45,7 @@ Grab the libsoc code from Github... This can be done from the base iot-detroit-j
 ```
 git clone https://github.com/jackmitch/libsoc
 ```
-Navigate to the newly created libscoc directory.
+Navigate to the newly created libsoc directory.
 ```
 cd libsoc
 ```
