@@ -15,7 +15,7 @@ As we are going to need to download content/code from the internet, we are going
 ##Git the code
 Grab the code used in this meetup by cloning this directory from your Dragonboard
 ```
-git clone https://github.com/mvartani76/iot-detroit-jan2017
+git clone https://github.com/mvartani76/iot-detroit-jan2017.git
 ```
 This will create a directory called **iot-detroit-jan2017**
 
